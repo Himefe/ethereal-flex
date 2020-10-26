@@ -82,13 +82,12 @@ const animaNumero = () => {
       }
     }, 25 * Math.random());
   });
-}
-
+};
 
 const clientesProject = document.querySelector('.aboutClientProject');
 
 function ScrollNumero() {
-  if (clientesProject.getBoundingClientRect().top < 536) {
+  if ((clientesProject.getBoundingClientRect().top - (window.innerHeight * 0.8)) < 0) {
     clientesProject.classList.add('mutado');
   } else if (clientesProject.classList.contains('mutado')) {
     clientesProject.classList.remove('mutado');
@@ -97,20 +96,12 @@ function ScrollNumero() {
 
 window.addEventListener('scroll', ScrollNumero);
 
-
 const handleMutation = (mutation) => {
   if (mutation[0].target.classList.contains('mutado')) {
     observer.disconnect();
     animaNumero();
-  } else {
-    
   }
-}
+};
 
 const observer = new MutationObserver(handleMutation);
-
-if (clientesProject.classList.contains('mutado')) {
-  animaNumero();
-}
-
 observer.observe(clientesProject, { attributes: true });
