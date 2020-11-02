@@ -58,7 +58,7 @@ function initAttBack() {
       menu.classList.remove('menuBack');
     }
   }
-  if (!menu.classList.contains('.menuBack')) {
+  if (!menu.classList.contains('menuBack')) {
     window.addEventListener('scroll', att);
   } else {
     window.removeEventListener('scroll');
@@ -75,6 +75,7 @@ const animaNumero = () => {
     const total = +numero.innerText;
     const timer = setInterval(() => {
       if (start < total) {
+        // eslint-disable-next-line no-plusplus
         start++;
         numero.innerText = start;
       } else if (start === total) {

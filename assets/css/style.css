@@ -194,15 +194,10 @@ img {
 }
 
 .bg-overlay {
-  padding: 280px 0 240px;
+  height: 120vh;
+  display: flex;
+  align-items: center;
   background-color: RGBA(15, 5, 20, 0.84);
-}
-
-@media only screen and (max-width: 761px) {
-  .bg-overlay {
-    padding: 180px 0 120px;
-    height: 100vh;
-  }
 }
 
 .bannerText h2 {
