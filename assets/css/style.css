@@ -200,6 +200,12 @@ img {
   background-color: RGBA(15, 5, 20, 0.84);
 }
 
+@media only screen and (max-width: 769px) {
+  .bg-overlay {
+    height: 100vh;
+  }
+}
+
 .bannerText h2 {
   font-size: 50px;
   font-family: "Oleo Script Swash Caps", cursive;
