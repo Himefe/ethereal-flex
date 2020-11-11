@@ -79,7 +79,6 @@ img {
   flex-wrap: wrap;
   height: 50px;
   align-items: center;
-  transition: all 1s;
 }
 
 .menu {
@@ -87,7 +86,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   border-width: 0 0 1px;
-  transition: all 1s;
 }
 
 .menu_ul li.active {
@@ -150,9 +148,9 @@ img {
 
   [data-menu="lista"] {
     position: absolute;
-    padding: 60px 0 0 0;
+    padding: 50px 0 0 0;
     width: 200px;
-    display: none;
+    visibility: hidden;
     top: 0;
     height: auto;
     right: 0;
@@ -163,9 +161,9 @@ img {
 
   [data-menu="lista"].ativo {
     display: block;
+    visibility: visible;
     background: #2d1c25;
     opacity: 1;
-    transition: all 1s;
   }
 }
 
@@ -491,10 +489,6 @@ img {
     max-width: 80%;
     margin-right: 10%;
     margin-left: 10%;
-  }
-
-  .slideMax p {
-    max-width: calc(80% - 40px);
   }
 }
 .subscribe .container h3 {
